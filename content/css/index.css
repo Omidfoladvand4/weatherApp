@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'montserrat', sans-serif;
+    background-image: url('../images/img.jpg');
+    background-size: cover;
+    background-position: top center;
+    
+  }
+  .loading{
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-bottom: 6px solid green;
+    border-top: 6px solid gold;
+    border-left: 6px solid  red ;
+    border-right: 6px solid blue;
+    animation: animate 0.8s infinite ;
+   opacity: 0;
+  
+
+   }
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+  .app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    width: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+    margin: 0 auto;
+  }
+  
+  header input {
+    width: 100%;
+    max-width: 380px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid #DF8E00;
+    color: #313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+  }
+  
+  header input:focus {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  main {
+    width: 450px;
+    height: 500px;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: rgba(0, 5, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+}
+main.active{
+  opacity: 1;
+}
+  .location .city {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .location .date {
+    color: #FFF;
+    font-size: 16px;
+  }
+  
+  .current .temp {
+    color: #FFF;
+    font-size: 102px;
+    font-weight: 900;
+    margin: 30px 0px;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .current .temp span {
+    font-weight: 500;
+  }
+  
+  .current .weather {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  .current .hi-low {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media screen and (max-width : 500px) {
+    main {
+      width: 90%;
+    }
+    header
+    {
+      width: 350px;
+    }
+  }
